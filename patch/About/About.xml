@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>[Cosplay Equipment] Blue Archive - CE Compatibility Patch</name>
+  <packageId>wntflm.cosplayequipmentbluearchive.cepatch</packageId>
+  <author>WntFlm</author>
+  <description>
+为原 mod 的制服、光环和盾牌添加 CE 支持。具体属性参考海军装甲和玻璃钢防弹盾牌
+
+---
+
+Adds CE compatibility for uniforms, halos, and shields. Stat balance equivalent to marine armor and plasteel ballistic shields.
+  </description>
+  <modVersion>0.1.0</modVersion>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+
+  <modDependencies>
+    <li>
+      <packageId>imranfish.xmlextensions</packageId>
+      <displayName>XML Extensions</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>mlmlmlm.cosplayequipmentbluearchive</packageId>
+      <displayName>[Cosplay equipment] Blue archive</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2674876907</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>CETeam.CombatExtended</packageId>
+      <displayName>Combat Extended</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2890901044</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>imranfish.xmlextensions</li>
+    <li>mlmlmlm.cosplayequipmentbluearchive</li>
+    <li>CETeam.CombatExtended</li>
+  </loadAfter>
+</ModMetaData>
