@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+    <xpath>
+      /Defs/ThingDef[
+      contains(defName, '_headgear') and
+      recipeMaker/recipeUsers/li[text()='BA_TailoringBench']
+      ]
+    </xpath>
+    <value>
+      <statBases>
+        <Bulk>2</Bulk>
+        <WornBulk>1</WornBulk>
+        <ArmorRating_Sharp>16</ArmorRating_Sharp>
+        <ArmorRating_Blunt>36</ArmorRating_Blunt>
+        <!-- <ArmorRating_Heat>0.5</ArmorRating_Heat> -->
+        <!-- <Insulation_Cold>10</Insulation_Cold> -->
+        <!-- <Insulation_Heat>10</Insulation_Heat> -->
+        <Flammability>0.5</Flammability>
+      </statBases>
+      <equippedStatOffsets>
+        <AimingAccuracy>0.15</AimingAccuracy>
+        <SmokeSensitivity>-0.5</SmokeSensitivity>
+        <ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+      </equippedStatOffsets>
+      <apparel>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
+        <layers>
+          <li>OnHead</li>
+          <li>StrappedHead</li>
+        </layers>
+      </apparel>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>
+      /Defs/ThingDef[
+      contains(defName, 'uniform') and
+      recipeMaker/recipeUsers/li[text()='BA_TailoringBench']
+      ]
+    </xpath>
+    <value>
+      <li Class="CombatExtended.PartialArmorExt">
+        <stats>
+          <li>
+            <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+            <parts>
+              <li>Eye</li>
+              <li>Nose</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
+            <parts>
+              <li>Eye</li>
+              <li>Nose</li>
+            </parts>
+          </li>
+        </stats>
+      </li>
+    </value>
+  </Operation>
+</Patch>

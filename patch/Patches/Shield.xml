@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+    <xpath>
+      /Defs/ThingDef[
+      contains(defName, '_shield') and
+      recipeMaker/recipeUsers/li[text()='Crafting_Chamber']
+      ]
+    </xpath>
+    <value>
+      <statBases>
+        <ArmorRating_Sharp>16</ArmorRating_Sharp>
+        <ArmorRating_Blunt>24</ArmorRating_Blunt>
+        <Flammability>0</Flammability>
+      </statBases>
+      <equippedStatOffsets>
+        <AimingAccuracy>0.15</AimingAccuracy>
+        <SmokeSensitivity>-0.5</SmokeSensitivity>
+        <ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+      </equippedStatOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="XmlExtensions.PatchOperationRemove">
+    <xpath>
+      /Defs/ThingDef[
+      contains(defName, '_shield') and
+      recipeMaker/recipeUsers/li[text()='Crafting_Chamber']
+      ]/statBases/StuffEffectMultiplierArmor
+    </xpath>
+  </Operation>
+</Patch>
