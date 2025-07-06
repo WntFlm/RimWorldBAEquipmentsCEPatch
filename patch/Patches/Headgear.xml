@@ -25,12 +25,20 @@
       </equippedStatOffsets>
       <apparel>
         <immuneToToxGasExposure>true</immuneToToxGasExposure>
-        <layers>
-          <li>OnHead</li>
-          <li>StrappedHead</li>
-        </layers>
       </apparel>
     </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      /Defs/ThingDef[
+      contains(defName, '_headgear') and
+      recipeMaker/recipeUsers/li[text()='BA_TailoringBench']
+      ]/apparel/layers/li[.="Overhead"]
+    </xpath>
+		<value>
+			<li>OnHead</li>
+		</value>
   </Operation>
 
   <Operation Class="PatchOperationAddModExtension">
